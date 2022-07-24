@@ -49,7 +49,7 @@ else:
   #split to train and test
   x = np.array(tips[["total_bill", "sex", "smoker", "day","time", "size"]])
   y = np.array(tips["tip"])
-  xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, test_size=0.2, )
+  xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_state=42)
 
   #train a machine learning model for the task of waiter tips prediction
   model = LinearRegression()
