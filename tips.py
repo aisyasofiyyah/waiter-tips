@@ -15,8 +15,7 @@ st.markdown("""Tips given to the waiters according to:
           \nnumber of people at a table
           \nand the day of the week""")
 
-figure = px.scatter(data_frame = data, x="total_bill",
-                    y="tip", size="size", color= "day", trendline="ols")
+figure = px.scatter(data_frame = tips, x="total_bill",y="tip", size="size", color= "day", trendline="ols")
 st.write(figure)
 
 st.markdown("""Tips given to the waiters according to: 
@@ -24,13 +23,13 @@ st.markdown("""Tips given to the waiters according to:
         \nthe number of people at a table
         \nand the gender of the person paying the bill""")
 
-figure = px.scatter(data_frame = data, x="total_bill",
+figure = px.scatter(data_frame = tips, x="total_bill",
                     y="tip", size="size", color= "sex", trendline="ols")
 figure.show()
 
 st.markdown("""Tips given to the waiters according to the days to find out which day the most tips are given to the waiters""")
 
-figure = px.pie(data, 
+figure = px.pie(tips, 
              values='tip', 
              names='day',hole = 0.5)
 figure.show()
