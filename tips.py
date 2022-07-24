@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align: center;'>Waiter Tips Prediction App</h1>", unsafe_allow_html=True)
 
-tips = pd.read_csv('https://raw.githubusercontent.com/aisyasofiyyah/iris/main/tips.csv')
+tips = pd.read_csv('https://raw.githubusercontent.com/aisyasofiyyah/waiter-tips/main/tips.csv')
 
 st.markdown("""Tips given to the waiters according to:
           \nthe total bill paid
