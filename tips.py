@@ -27,7 +27,7 @@ if option=='analysis':
 
   with tab2:
             st.markdown("""Tips given to the waiters according to: 
-                    \nthe total bill paid, the number of people at a table and the gender of the person paying the bill""")
+            \nthe total bill paid, the number of people at a table and the gender of the person paying the bill""")
 
             figure = px.scatter(data_frame = tips, x="total_bill", y="tip", size="size", color= "sex", trendline="ols")
             st.write(figure)
@@ -38,7 +38,7 @@ if option=='analysis':
             figure = px.pie(tips, values='tip', names='day',hole = 0.5)
             st.write(figure)
 
-else
+else:
         
   #change string to numerical values
   tips["sex"] = tips["sex"].map({"Female": 0, "Male": 1})
