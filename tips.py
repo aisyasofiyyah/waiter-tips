@@ -13,7 +13,7 @@ st.text("Waiter Tips App is where we analyse the tips given to a waiter for serv
 
 tips = pd.read_csv('https://raw.githubusercontent.com/aisyasofiyyah/waiter-tips/main/tips.csv')
 
-st.sidebar.image('waiter.png',width=500)
+st.sidebar.image('waiter.png',width=400)
 option = st.sidebar.radio("This app contains two parts. Click to see.",('Analysis','Prediction'))
 
 if option=='Analysis':
