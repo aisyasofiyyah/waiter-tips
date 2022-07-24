@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import statsmodels.api as sm
 import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.ensemble import RandomForestClassifier
@@ -16,7 +15,7 @@ st.markdown("""Tips given to the waiters according to:
           \nnumber of people at a table
           \nand the day of the week""")
 
-figure = px.scatter(data_frame = tips, x="total_bill",y="tip", size="size", color= "day", trendline="ols")
+figure = px.scatter(data_frame = tips, x="total_bill",y="tip", size="size", color= "day")
 st.write(figure)
 
 st.markdown("""Tips given to the waiters according to: 
@@ -25,7 +24,7 @@ st.markdown("""Tips given to the waiters according to:
         \nand the gender of the person paying the bill""")
 
 figure = px.scatter(data_frame = tips, x="total_bill",
-                    y="tip", size="size", color= "sex", trendline="ols")
+                    y="tip", size="size", color= "sex")
 figure.show()
 
 st.markdown("""Tips given to the waiters according to the days to find out which day the most tips are given to the waiters""")
