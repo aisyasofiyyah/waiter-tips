@@ -15,7 +15,8 @@ tips = pd.read_csv('https://raw.githubusercontent.com/aisyasofiyyah/waiter-tips/
 
 option = st.sidebar.selectbox('Select Variables',['Analysis','Prediction'])
 
-if option=='analysis':
+if option=='Analysis':
+  
   tab1, tab2, tab3 = st.tabs(["Analysis 1", "Analysis 2", "Analysis 3"])
 
   with tab1:
