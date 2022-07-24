@@ -32,4 +32,4 @@ st.markdown("""Tips given to the waiters according to the days to find out which
 figure = px.pie(tips, 
              values='tip', 
              names='day',hole = 0.5)
-figure.show()
+st.write(figure)
