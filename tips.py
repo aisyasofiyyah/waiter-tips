@@ -13,6 +13,7 @@ st.text("Waiter Tips App is where we analyse the tips given to a waiter for serv
 
 tips = pd.read_csv('https://raw.githubusercontent.com/aisyasofiyyah/waiter-tips/main/tips.csv')
 
+st.sidebar.image('waiter.png', width= 225)
 option = st.sidebar.selectbox('Select Variables',['Analysis','Prediction'])
 
 if option=='Analysis':
@@ -57,6 +58,6 @@ else:
   model.fit(xtrain, ytrain)
 
 st.sidebar.markdown("""Reference: 
-                      \nZahra Amini, Waiter's Tips Dataset [1](https://www.kaggle.com/datasets/aminizahra/tips-dataset)
-                      \nAman Kharwal, Waiter Tips Prediction with Machine Learning [2](https://thecleverprogrammer.com/2022/02/01/waiter-tips-prediction-with-machine-learning/)
+                      \n[1](https://www.kaggle.com/datasets/aminizahra/tips-dataset) Zahra Amini, Waiter's Tips Dataset
+                      \n[2](https://thecleverprogrammer.com/2022/02/01/waiter-tips-prediction-with-machine-learning/) Aman Kharwal, Waiter Tips Prediction with Machine Learning
                       """)
