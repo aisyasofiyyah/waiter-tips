@@ -47,13 +47,13 @@ else:
   tips["time"] = tips["time"].map({"Lunch": 0, "Dinner": 1})
 
   #split to train and test
-  x = np.array(tips[["total_bill", "sex", "smoker", "day","time", "size"]])
+  X = np.array(tips[["total_bill", "sex", "smoker", "day","time", "size"]])
   y = np.array(tips["tip"])
-  xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_state=42)
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
 
   #train a machine learning model for the task of waiter tips prediction
   model = LinearRegression()
-  model.fit(xtrain, ytrain)
+  model.fit(X_train, y_train)
   
   #predict labels for the unknown data
   y_pred = model.predict(X_test)
