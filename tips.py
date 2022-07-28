@@ -67,7 +67,7 @@ else:
             'Variance':[{r2_score(y_test, y_pred)}]
              })
   
-  f= plt.figure(figsize=(15,10))
+  f= plt.figure(figsize=(13,8))
   plt.scatter(X_test, y_test, color='blue', label='Total Bill Paid')
   plt.plot(X_test, y_pred, color='red', label='Predicted Tips Given to Waiter', linewidth=1)
   plt.xlabel("total_bill")
