@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
 
 st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align: center;'>Waiter Tips Prediction App</h1>", unsafe_allow_html=True)
