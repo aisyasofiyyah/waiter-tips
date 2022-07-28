@@ -72,6 +72,7 @@ else:
   plt.xlabel("total_bill")
   plt.ylabel("tips")
   plt.legend()
+  f.show()
   st.plotly_chart(f)
   
 st.sidebar.markdown("""Reference: 
