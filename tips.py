@@ -60,13 +60,14 @@ else:
   #predict labels for the unknown data
   y_pred = model.predict(X_test)
   
-  #evaluate the model performance
-  st.markdown("Evaluation of the Linear Regression model performance.")
-  st.markdown("Root mean squared error: {} ".format(mean_squared_error(y_test, y_pred)**0.5))
-  st.markdown("Variance score: {} ".format(r2_score(y_test,y_pred)))
-  st.markdown("*variance score near 1 means perfect prediction.")
+  #evaluate the model performance  
+  st.markdown("Evaluation of the Linear Regression model performance. Variance score near 1 means perfect prediction")
+  st.table({
+            'RMSE':[{(mean_squared_error(y_test, y_pred))**0.5}],
+            'Variance':[{r2_score(y_test, y_pred)}]
+             })
   
-  f= plt.figure()
+  f= plt.figure(figsize=(15,10))
   plt.scatter(X_test, y_test, color='blue', label='Total Bill Paid')
   plt.plot(X_test, y_pred, color='red', label='Predicted Tips Given to Waiter', linewidth=1)
   plt.xlabel("total_bill")
