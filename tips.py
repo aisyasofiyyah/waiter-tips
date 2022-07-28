@@ -67,9 +67,9 @@ else:
   st.markdown("*variance score near 1 means perfect prediction.")
   
   f= plt.figure(figsize=(15,10))
-  plt.plot(X_test, y_test, color='blue', label='Total Bill Paid')
+  px.scatter(X_test, y_test, color='blue', label='Total Bill Paid')
   plt.plot(X_test, y_pred, color='red', label='Predicted Tips Given to Waiter', linewidth=1)
-  plt.xlabel("")
+  plt.xlabel("total_bill")
   plt.ylabel("tips")
   plt.legend()
   st.write(f)
