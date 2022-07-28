@@ -72,7 +72,7 @@ else:
   plt.legend()
   st.write(f)
   
- st.sidebar.markdown("""Reference: 
+st.sidebar.markdown("""Reference: 
                       \n[1)](https://www.kaggle.com/datasets/aminizahra/tips-dataset) Zahra Amini, Waiter's Tips Dataset
                       \n[2)](https://thecleverprogrammer.com/2022/02/01/waiter-tips-prediction-with-machine-learning/) Aman Kharwal, Waiter Tips Prediction with Machine Learning
                       """)
