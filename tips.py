@@ -49,8 +49,8 @@ else:
   tips["time"] = tips["time"].map({"Lunch": 0, "Dinner": 1})
 
   #split to train and test
-  X = np.array(tips[["total_bill", "sex", "smoker", "day","time", "size"]])
-  y = np.array(tips["tip"])
+  X = pd.DataFrame(tips["total_bill"])
+  y = tips.tip
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
 
   #train a machine learning model for the task of waiter tips prediction
