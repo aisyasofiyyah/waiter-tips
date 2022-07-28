@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 
 st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align: center;'>Waiter Tips Prediction App</h1>", unsafe_allow_html=True)
-st.text("Waiter Tips App is where we analyse the tips given to a waiter for serving the food in a restaurant depends on what kind of factors and predict the tips.")
+st.markdown("Waiter Tips App is where we analyse the tips given to a waiter for serving the food in a restaurant depends on what kind of factors and predict the tips.")
 
 tips = pd.read_csv('https://raw.githubusercontent.com/aisyasofiyyah/waiter-tips/main/tips.csv')
 
@@ -21,10 +21,9 @@ if option=='Analysis':
   tab1, tab2, tab3 = st.tabs(["Analysis 1", "Analysis 2", "Analysis 3"])
 
   with tab1:
-            st.markdown("""Tips given to the waiters according to:
-            \nthe total bill paid, number of people at a table and the day of the week""")
+            st.markdown("""Tips given to the waiters according to the total bill paid, number of people at a table and the day of the week""")
 
-            figure = px.scatter(data_frame = tips, x="total_bill",y="tip", size="size", color= "day",trendline="ols")
+            figure = px.scatter(data_frame = tips, x="total_bill",y="tip", size="Number of People", color= "day",trendline="ols")
             st.write(figure)
 
   with tab2:
